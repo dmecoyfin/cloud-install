@@ -10,6 +10,7 @@ paq1 <- c("data.table", "rpart", "yaml", "httr", "devtools", "yaml", "rlist")
 paq2 <- c("magrittr", "stringi", "curl", "openssl", "roxygen2", "ranger")
 paq3 <- c("dplyr", "caret", "covr", "lintr", "tidyverse", "tidyr", "shiny")
 pag4 <- c("ggplot2", "plotly", "mlflow")
+paq5 <- c()
 
 paquetes <-  c( paq1, paq2, paq3, paq4, paq5 )
 pak::pkg_install( paquetes )
