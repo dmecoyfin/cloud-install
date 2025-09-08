@@ -98,7 +98,7 @@ if [ ! -f /home/$USER/cloud-install/r/"$kaggleprueba" ]; then
     exit 1
 fi
 
-cp /home/$USER/cloud-install/r/"$kaggleprueba"  /home/$USER/$github_catedra_repo/src/rpart
+cp /home/$USER/cloud-install/r/"$kaggleprueba"  /home/$USER/$github_catedra_repo/src/arboles
 if [ ! $? -eq 0 ]; then 
   echo "Error : No se pudo copiar /home/$USER/install/$kaggleprueba"
   exit 1
