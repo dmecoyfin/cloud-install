@@ -95,13 +95,13 @@ bitacora   "rstudio"
 [ ! -e "/home/$USER/log/ins_rstudio.txt" ] && exit 1
 
 # Primera instalacion de paquetes de R , 5 minutos
-sudo DEBIAN_FRONTEND=noninteractive  apt-get --yes install \
-   r-cran-data.table  r-cran-rpart  r-cran-yaml \
-   r-cran-httr  r-cran-devtools  r-cran-yaml  r-cran-rlist \
-   r-cran-magrittr  r-cran-stringi  r-cran-curl  r-cran-openssl  \
-   r-cran-roxygen2  r-cran-ranger  r-cran-dplyr  r-cran-caret  \
-   r-cran-covr  r-cran-lintr  r-cran-dplyr  r-cran-tidyverse  \
-   r-cran-tidyr  r-cran-shiny r-cran-ggplot2  r-cran-plotly
+# sudo DEBIAN_FRONTEND=noninteractive  apt-get --yes install \
+#   r-cran-data.table  r-cran-rpart  r-cran-yaml \
+#   r-cran-httr  r-cran-devtools  r-cran-yaml  r-cran-rlist \
+#   r-cran-magrittr  r-cran-stringi  r-cran-curl  r-cran-openssl  \
+#   r-cran-roxygen2  r-cran-ranger  r-cran-dplyr  r-cran-caret  \
+#   r-cran-covr  r-cran-lintr  r-cran-tidyverse  \
+#   r-cran-tidyr  r-cran-shiny r-cran-ggplot2  r-cran-plotly
 
 
 # para utilizar  u2r  en  install.packages()
