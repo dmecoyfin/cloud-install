@@ -38,7 +38,10 @@ sudo  DEBIAN_FRONTEND=noninteractive  apt-get --yes install  \
       ffmpeg  gir1.2-gtop-2.0 lm-sensors   \
       libdbus-glib-1-dev libdbus-1-dev     \
       debconf-utils  swig  libopenblas-dev \
-      libhiredis-dev
+      libhiredis-dev  gdal-bin             \
+      libglu1-mesa-dev  libgmp3-dev        \
+      libgsl0-dev  jags  libmpfr-dev       \
+      libopenmpi-dev
 
 bitacora   "system packages"
 

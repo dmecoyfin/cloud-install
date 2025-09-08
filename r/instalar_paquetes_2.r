@@ -16,21 +16,22 @@ paq12 <- c("h2o","agua","automl")
 
 paq <- c( paq1, paq2, paq3, paq4, paq5, paq6, paq7, paq8, paq9, paq10, paq11, paq12 )
 
-install.packages( paq,  dependencies= TRUE, Ncpus= 4, INSTALL_opts="--no-multiarch" )
+require("pak")
+pak::pkg_install( paq )
 
 
 library( "devtools" )
-install.packages("tibble", INSTALL_opts="--no-multiarch" )
-devtools::install_github( "AppliedDataSciencePartners/xgboostExplainer", INSTALL_opts="--no-multiarch" )
+pak::pkg_install("tibble")
+pak::pkg_install("AppliedDataSciencePartners/xgboostExplainer")
 
-install.packages( c("purrr","ps","diffobj","pkgbuild","fs","sass","mime","commonmark","tinytex"), dependencies= TRUE, Ncpus= 4, INSTALL_opts="--no-multiarch" )
-devtools::install_github( "NorskRegnesentral/shapr", dependencies = TRUE, INSTALL_opts="--no-multiarch" )
+pak::pkg_install( c("purrr","ps","diffobj","pkgbuild","fs","sass","mime","commonmark","tinytex"))
+pak::pkg_install("NorskRegnesentral/shapr")
 
-devtools::install_url('https://github.com/catboost/catboost/releases/download/v1.2.8/catboost-R-Linux-1.2.8.tgz', INSTALL_opts = c("--no-multiarch", "--no-test-load"))
+pak::pkg_install('https://github.com/catboost/catboost/releases/download/v1.2.8/catboost-R-Linux-1.2.8.tgz')
 
-devtools::install_github("ManuelHentschel/vscDebugger", INSTALL_opts="--no-multiarch" )
+pak::pkg_install("ManuelHentschel/vscDebugger")
 
-devtools::install_github("ja-thomas/autoxgboost", INSTALL_opts="--no-multiarch" )
+pak::pkg_install("ja-thomas/autoxgboost")
 
 Sys.setenv(NOT_CRAN = "true")
 install.packages("polars", repos = "https://community.r-multiverse.org", INSTALL_opts="--no-multiarch" )
