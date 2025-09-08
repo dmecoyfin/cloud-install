@@ -16,10 +16,10 @@ source  /home/$USER/cloud-install/sh/common.sh
 cd
 source  /home/$USER/.venv/bin/activate
 
-pip3 install  pygments  oauthlib
+/home/gustavo_denicolay/.local/bin/uv pip install  pygments  oauthlib
  
 # la instalacion de jupyter lab
-pip3  install jupyterlab
+/home/gustavo_denicolay/.local/bin/uv pip  install jupyterlab
 
 # instalo nvm  version  0.40.3  del  2025-03-23
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.40.3/install.sh | bash
@@ -36,7 +36,7 @@ jupyter labextension install  @jupyterlab/toc
 
 
 # instalo git para Jupyter Lab
-pip3 install --upgrade  jupyterlab  jupyterlab-git
+/home/gustavo_denicolay/.local/bin/uv pip install --upgrade  jupyterlab  jupyterlab-git
 
 # por supuesto, la instalacion de Jupyter Lab ya instala el kernel de Python
 
@@ -47,7 +47,7 @@ cp  /home/$USER/cloud-install/py/jupyter_server_config.py   /home/$USER/.jupyter
 mkdir /home/$USER/.venv/.jupyter
 cp  /home/$USER/cloud-install/py/jupyter_server_config.py   /home/$USER/.venv/.jupyter/jupyter_server_config.py
 
-pip3  install  --upgrade nbconvert
+/home/gustavo_denicolay/.local/bin/uv pip  install  --upgrade nbconvert
 
 
 # abro el puerto  8888  en Google Cloud  para Jupyter
