@@ -10,8 +10,6 @@ logito="ins_lightgbm.txt"
 
 
 source  /home/$USER/cloud-install/sh/common.sh
-
-source  /home/$USER/cloud-install/sh/common.sh
 cd
 rm -rf  LightGBM
 git clone --recursive  https://github.com/Microsoft/LightGBM
