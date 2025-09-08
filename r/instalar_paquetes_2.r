@@ -1,6 +1,9 @@
 options(repos = c("https://cloud.r-project.org/"))
 options(Ncpus = 4)
 
+require("bspm")
+bspm::disable()
+
 paq1 <- c("microbenchmark")
 paq2 <- c("Rcpp", "Matrix", "glm2")
 paq3 <- c("ROCR", "MASS", "synchronicity")
