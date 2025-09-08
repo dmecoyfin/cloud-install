@@ -132,13 +132,13 @@ echo $SEAC
 
 
 # borro desktop por si quedo de alguna instalacion anterior
-gcloud compute instances  delete  desktop-jr   --zone=southamerica-east1-c \
+gcloud compute instances  delete  desktop   --zone=southamerica-east1-c \
        --quiet  --verbosity=none
 
-printf  '\n\n\nIniciando creacion de virtual machine desktop-jr\n\n'
+printf  '\n\n\nIniciando creacion de virtual machine desktop\n\n'
 
 # creo la virtual machine desktop
-gcloud compute instances create desktop-jr \
+gcloud compute instances create desktop \
     --zone=southamerica-east1-c \
     --machine-type=e2-highmem-8  \
     --network-interface=network-tier=PREMIUM,stack-type=IPV4_ONLY,subnet=default \
@@ -148,55 +148,21 @@ gcloud compute instances create desktop-jr \
     --service-account=$SEAC \
     --scopes=https://www.googleapis.com/auth/cloud-platform \
     --tags=http-server,https-server \
-    --create-disk=auto-delete=yes,boot=yes,device-name=desktop-jr,image=image-dm,mode=rw,size=192,type=pd-standard \
+    --create-disk=auto-delete=yes,boot=yes,device-name=desktop,image=image-dm,mode=rw,size=192,type=pd-standard \
     --no-shielded-secure-boot  \
     --metadata-from-file shutdown-script=/home/$USER/cloud-install/direct/shutdown-script.sh
 
-printf  '\nvirtual machine  desktop-jr  CREADA\n\n'
+printf  '\nvirtual machine  desktop  CREADA\n\n'
 
-printf  '\nesperando 2 minutos para apagar desktop-jr\n\n'
+printf  '\nesperando 2 minutos para apagar desktop\n\n'
 sleep 120
 
 # la detengo
-gcloud compute instances  stop  desktop-jr   --zone=southamerica-east1-c
+gcloud compute instances  stop  desktop   --zone=southamerica-east1-c
 
 source  /home/$USER/install/common.sh
 
-bitacora   "desktop-jr creation"
-
-#------------------------------------------------------------------------------
-
-source  /home/$USER/install/common.sh
-
-# creo desktop-sr
-gcloud compute instances create desktop-sr \
-    --zone=southamerica-east1-c \
-    --machine-type=e2-standard-4 \
-    --network-interface=network-tier=PREMIUM,stack-type=IPV4_ONLY,subnet=default \
-    --no-restart-on-failure \
-    --maintenance-policy=TERMINATE \
-    --provisioning-model=SPOT \
-    --instance-termination-action=STOP \
-    --service-account=$SEAC \
-    --scopes=https://www.googleapis.com/auth/cloud-platform \
-    --tags=http-server,https-server \
-    --create-disk=auto-delete=yes,boot=yes,device-name=desktop-sr,image=image-dm,mode=rw,size=64,type=pd-standard \
-    --no-shielded-secure-boot  \
-    --metadata-from-file shutdown-script=/home/$USER/cloud-install/direct/shutdown-script.sh
-
-
-printf  '\nvirtual machine  desktop-sr  CREADA\n\n'
-
-printf  '\nesperando 2 minutos para apagar desktop-sr\n\n'
-sleep 120
-
-# la detengo
-gcloud compute instances  stop  desktop-sr   --zone=southamerica-east1-c
-
-source  /home/$USER/install/common.sh
-
-bitacora   "desktop-sr creation"
-
+bitacora   "desktop creation"
 
 #------------------------------------------------------------------------------
 printf  '\n\n\n\n'
