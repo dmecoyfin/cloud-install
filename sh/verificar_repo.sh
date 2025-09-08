@@ -19,8 +19,8 @@ if [ ! -d /home/$USER/$github_catedra_repo/src/arboles ]; then
     exit 1
 fi
 
-if [ ! -f /home/$USER/$github_catedra_repo/src/arboles/z102_FinalTrain.ipynb ]; then
-    echo "Error Fatal : No existe el archivo  /home/$USER/$github_catedra_repo/src/arboles/z102_FinalTrain.ipynb"
+if [ ! -f /home/$USER/$github_catedra_repo/src/arboles/z0201_ComparandoModelos.ipynb ]; then
+    echo "Error Fatal : No existe el archivo  /home/$USER/$github_catedra_repo/src/arboles/z0201_ComparandoModelos.ipynb"
     exit 1
 fi
 
