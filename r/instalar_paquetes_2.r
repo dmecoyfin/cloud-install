@@ -27,7 +27,7 @@ pak::pkg_install("AppliedDataSciencePartners/xgboostExplainer")
 pak::pkg_install( c("purrr","ps","diffobj","pkgbuild","fs","sass","mime","commonmark","tinytex"))
 pak::pkg_install("NorskRegnesentral/shapr")
 
-pak::pkg_install('https://github.com/catboost/catboost/releases/download/v1.2.8/catboost-R-Linux-1.2.8.tgz')
+devtools::install_url('https://github.com/catboost/catboost/releases/download/v1.2.8/catboost-R-Linux-1.2.8.tgz', INSTALL_opts = c("--no-multiarch", "--no-test-load"))
 
 pak::pkg_install("ManuelHentschel/vscDebugger")
 
