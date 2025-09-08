@@ -31,8 +31,6 @@ bitacora   "R  xgboost"
 bitacora   "R  lightgbm"
 
 
-Rscript --verbose  /home/$USER/cloud-install/r/instalar_paquetes_2.r  | sudo tee -a /home/$USER/install/log.txt
-
 # Segunda instalacion de paquetes de R , 40 minutos en vm  t2d-standard-4
 bitacora   "R  packages 2a"
 Rscript --verbose  /home/$USER/cloud-install/r/instalar_paquetes_2.r  | sudo tee -a /home/$USER/install/log.txt
