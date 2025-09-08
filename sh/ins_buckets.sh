@@ -11,10 +11,10 @@ logito="ins_buckets.txt"
 
 source  /home/$USER/cloud-install/sh/common.sh
 
-# instalo Google Cloud Fuse  para poder ver el bucket  Version:  3.2.0 | Released:2025-08-11
+# instalo Google Cloud Fuse  para poder ver el bucket  Version:  3.3.0 | Released:2025-09-08
 # Documentacion https://cloud.google.com/storage/docs/gcs-fuse?hl=en-419
 
-gcsfusever="3.2.0"
+gcsfusever="3.3.0"
 gcsfusepack="gcsfuse_"$gcsfusever"_amd64.deb"
 cd
 curl  -L -O "https://github.com/GoogleCloudPlatform/gcsfuse/releases/download/v$gcsfusever/$gcsfusepack"
