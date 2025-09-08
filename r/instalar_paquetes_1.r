@@ -4,7 +4,9 @@ options(Ncpus = 4)
 install.packages( "pak",  dependencies= TRUE, INSTALL_opts="--no-multiarch" )
 require("pak")
 
+install.packages( "bspm",  dependencies= TRUE, INSTALL_opts="--no-multiarch" )
 require("bspm")
+
 bspm::disable()
 paq1 <- c("data.table", "rpart", "yaml", "httr", "devtools", "yaml", "rlist")
 paq2 <- c("magrittr", "stringi", "curl", "openssl", "roxygen2", "ranger")
