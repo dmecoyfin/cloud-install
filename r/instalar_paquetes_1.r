@@ -19,7 +19,7 @@ pak::pkg_install( paquetes )
 
 
 library( "devtools" )
-devtools::install_github("IRkernel/IRkernel", force=TRUE, INSTALL_opts="--no-multiarch" )
-devtools::install_github("krlmlr/ulimit", force=TRUE, INSTALL_opts="--no-multiarch" )
+pak::pkg_install("IRkernel/IRkernel")
+pak::pkg_install("krlmlr/ulimit")
 
 quit( save="no" )
