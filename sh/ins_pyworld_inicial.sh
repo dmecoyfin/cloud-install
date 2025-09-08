@@ -14,6 +14,7 @@ source  /home/$USER/cloud-install/sh/common.sh
 # Instalo Python SIN  Anaconda, Miniconda, etc-------------------------------
 # Documentacion  https://docs.python-guide.org/starting/install3/linux/
 
+# instalacion  uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 export PATH="$PATH:/home/$USER/.local/bin"
@@ -75,7 +76,7 @@ uv pip install  tensorflow  Keras
 deactivate
 
 #--------------------------------------
-# Python 3.13.5  2025-07-10
+# Python 3.13.7  2025-09-02
 
 #sudo  DEBIAN_FRONTEND=noninteractive  apt-get --yes install \
 #        python3.13 python3-pip  python3-dev  ipython3  python3.12-venv

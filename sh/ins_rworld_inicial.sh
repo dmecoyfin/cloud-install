@@ -11,7 +11,7 @@ logito="ins_rworld_inicial.txt"
 
 source  /home/$USER/cloud-install/sh/common.sh
 
-# instalar  R   version: 4.4.3 | released: 2025-02-28
+# instalar  R   version: 4.5.1 | released: 2025-06-13
 # Documentacion  https://cran.r-project.org/
 
 cd
@@ -105,7 +105,7 @@ sudo DEBIAN_FRONTEND=noninteractive  apt-get --yes install \
 
 
 # para utilizar  u2r  en  install.packages()
-sudo Rscript -e 'install.packages("bspm")'
+sudo Rscript -e 'install.packages("bspm","pak")'
 sudo apt-get install python3-dbus python3-gi python3-apt
 Rscript --verbose  /home/$USER/cloud-install/r/instalar_paquetes_1.r  | sudo tee -a /home/$USER/install/log.txt
 
