@@ -14,13 +14,13 @@ if [ ! -d /home/$USER/$github_catedra_repo/src ]; then
 fi
 
 
-if [ ! -d /home/$USER/$github_catedra_repo/src/rpart ]; then
-    echo "Error Fatal : No existe la carpeta  del repositorio  /home/$USER/$github_catedra_repo/src/rpart"
+if [ ! -d /home/$USER/$github_catedra_repo/src/arboles ]; then
+    echo "Error Fatal : No existe la carpeta  del repositorio  /home/$USER/$github_catedra_repo/src/arboles"
     exit 1
 fi
 
-if [ ! -f /home/$USER/$github_catedra_repo/src/rpart/z101_PrimerModelo.R ]; then
-    echo "Error Fatal : No existe el archivo  /home/$USER/$github_catedra_repo/src/rpart/z101_PrimerModelo.R"
+if [ ! -f /home/$USER/$github_catedra_repo/src/arboles/z102_FinalTrain.ipynb ]; then
+    echo "Error Fatal : No existe el archivo  /home/$USER/$github_catedra_repo/src/arboles/z102_FinalTrain.ipynb"
     exit 1
 fi
 
