@@ -1,7 +1,9 @@
 options(repos = c("https://cloud.r-project.org/"))
 options(Ncpus = 4)
 
-install.packages( "mlflow",  dependencies= TRUE, INSTALL_opts="--no-multiarch" )
+install.packages( "pak",  dependencies= TRUE, INSTALL_opts="--no-multiarch" )
+require("pak")
+pak::pkg_install( "mlflow" )
 
 
 library( "devtools" )
