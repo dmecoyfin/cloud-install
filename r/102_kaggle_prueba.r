@@ -20,8 +20,9 @@ getandincrement <- function( nom_archivo )
 generarmodelo <- function( param )
 {
   # cargo el dataset pequeno
-  dataset <- fread( paste0("~/buckets/b1/datasets/competencia_01_crudo.csv" ) )
-  
+  dataset <- fread( paste0("~/buckets/b1/datasets/competencia_01_crudo.csv" ),
+   logical01= FALSE )
+
   # calculo el periodo0 consecutivo
   dsimple <- dataset[, list(
     "pos" = .I,
@@ -59,13 +60,6 @@ generarmodelo <- function( param )
   setorder( dsimple, pos )
   dataset[, clase_ternaria := dsimple$clase_ternaria ]
 
-  fwrite( dataset,
-    file =  "~/buckets/b1/datasets/competencia_01.csv.gz",
-    sep = ","
-  )
-
-  dataset <- fread( "~/buckets/b1/datasets/competencia_01.csv.gz"  )
-  
   dtrain <- dataset[foto_mes == 202104] # defino donde voy a entrenar
   dapply <- dataset[foto_mes == 202106] # defino donde voy a aplicar el modelo
 
@@ -117,7 +111,7 @@ generarmodelo <- function( param )
       "'"
   )
 
-  comando <- paste0( "~/install/proc_kaggle_submit_sr.sh ",
+  comando <- paste0( "~/install/proc_kaggle_submit_01.sh ",
       "TRUE ",
       archivo_submit, " ",
       comentario

@@ -19,7 +19,7 @@ fi
 source /home/$USER/.venv/bin/activate
 
 if  [[ $hacersubmit  == "TRUE" ]] ; then
-  kaggle competitions submit -c  $kaggle_competencia_sr \
+  kaggle competitions submit -c  $kaggle_competencia_01 \
   -f  $archivo \
   -m   "$comentario" \
    > /dev/null
