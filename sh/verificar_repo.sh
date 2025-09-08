@@ -220,13 +220,13 @@ fi
 
 # cargo lo nuevo
 git checkout $MIHOST
-git add /home/$USER/$github_catedra_repo/src/rpart/"$kaggleprueba"
+git add /home/$USER/$github_catedra_repo/src/arboles/"$kaggleprueba"
 if [ ! $? -eq 0 ]; then 
-  echo "Fatal Error : git add /home/$USER/$github_catedra_repo/src/rpart/$kaggleprueba"
+  echo "Fatal Error : git add /home/$USER/$github_catedra_repo/src/arboles/$kaggleprueba"
   exit 1
 fi
 
-git commit -m "rpart/$kaggleprueba"
+git commit -m "arboles/$kaggleprueba"
 
 
 git push   origin  $MIHOST
