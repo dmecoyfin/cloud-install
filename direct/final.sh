@@ -14,6 +14,7 @@ printf  'Esperando a que termine la instalacion de paquetes lentos de R\n\n'
 /home/$USER/install/semaforo  wait  /sem_xgboost
 /home/$USER/install/semaforo  wait  /sem_lightgbm
 /home/$USER/install/semaforo  wait  /sem_lentosR
+
 printf  '\nPaquetes lentos de R instalados\n'
 
 
