@@ -58,8 +58,8 @@ gcloud config set project $myfirstproject
 
 
 myserviceaccount=$(gcloud iam service-accounts list --format='value(EMAIL)' | head -1)
- 
-  
+
+
 # instance-instalacion STANDARD creacion
 gcloud compute instances create instance-instalacion \
     --project="$myfirstproject" \
@@ -79,8 +79,8 @@ gcloud compute instances create instance-instalacion \
     --shielded-integrity-monitoring \
     --labels=goog-ec-src=vm_add-gcloud \
     --reservation-affinity=none
-    
-    
+
+
 # verifico que existan buckets, sino creo el primero
 
 myfirstproject=$(gcloud projects list  --format='value(PROJECT_ID)' | head -1 )
