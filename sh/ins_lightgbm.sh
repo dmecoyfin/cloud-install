@@ -24,7 +24,7 @@ bitacora   "R  lightgbm"
 Rscript --verbose  /home/$USER/cloud-install/r/instalar_paquetes_3.r
 bitacora   "R  packages 3"
 
-/home/$USER/semaforo  post /sem_lentosR
+/home/$USER/install/semaforo  post /sem_lentosR
 
 bitacora   "lightgbm"
 
