@@ -1,5 +1,5 @@
 options(repos = c("https://duckdb.r-universe.dev/"))
-options(Ncpus = 4)
+options(Ncpus = 8)
 
 require("bspm")
 bspm::disable()

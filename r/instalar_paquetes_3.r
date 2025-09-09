@@ -1,5 +1,5 @@
 options(repos = c("https://cloud.r-project.org/"))
-options(Ncpus = 4)
+options(Ncpus = 8)
 
 require("bspm")
 bspm::disable()
