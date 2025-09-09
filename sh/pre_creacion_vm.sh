@@ -2,6 +2,8 @@
 
 # este script corre en Cloud Shell
 
+printf "\niniciando la instalacion\n\n"
+
 # parametros fundamentales
 github_catedra_user="dmecoyfin"
 github_install_repo="cloud-install"
