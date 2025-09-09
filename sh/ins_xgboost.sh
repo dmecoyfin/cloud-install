@@ -11,6 +11,8 @@ logito="ins_xgboost.txt"
 
 source  /home/$USER/cloud-install/sh/common.sh
 
+/home/$USER/install/semaforo open /sem_xgboost  0
+
 cd
 rm -rf  xgboost
 git clone --recursive  https://github.com/dmlc/xgboost
@@ -22,7 +24,8 @@ R CMD INSTALL .
 cd
 rm -rf  xgboost
 
-/home/$USER/install/semaforo  post /sem_lentosR
+
+/home/$USER/install/semaforo  post /sem_xgboost
 
 bitacora   "xgboost"
 

@@ -11,6 +11,7 @@ logito="ins_lentosR_iniciado.txt"
 
 source  /home/$USER/cloud-install/sh/common.sh
 
+/home/$USER/install/semaforo open /sem_lentosR  0
 
 Rscript --verbose  /home/$USER/cloud-install/r/instalar_paquetes_lentos.r
 

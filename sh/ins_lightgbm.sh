@@ -11,6 +11,8 @@ logito="ins_lightgbm.txt"
 
 source  /home/$USER/cloud-install/sh/common.sh
 
+/home/$USER/install/semaforo open /sem_lightgbm  0
+
 cd
 rm -rf  LightGBM
 git clone --recursive  https://github.com/Microsoft/LightGBM
@@ -24,7 +26,7 @@ bitacora   "R  lightgbm"
 Rscript --verbose  /home/$USER/cloud-install/r/instalar_paquetes_3.r
 bitacora   "R  packages 3"
 
-/home/$USER/install/semaforo  post /sem_lentosR
+/home/$USER/install/semaforo  post /sem_lightgbm
 
 bitacora   "lightgbm"
 
