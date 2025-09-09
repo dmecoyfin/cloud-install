@@ -18,7 +18,7 @@ source  /home/$USER/cloud-install/sh/common.sh
 sudo  DEBIAN_FRONTEND=noninteractive  apt-get update
 
 # librerias necesarias para R, Python, Julia, JupyterLab, son mas de 700
-sudo  DEBIAN_FRONTEND=noninteractive  apt-get --yes install  \
+sudo  DEBIAN_FRONTEND=noninteractive  nala --yes install  \
       libssl-dev  apt-utils                \
       libcurl4-openssl-dev  libxml2-dev    \
       libgeos-dev  libproj-dev             \

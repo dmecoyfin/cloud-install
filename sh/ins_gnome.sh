@@ -16,7 +16,7 @@ source  /home/$USER/cloud-install/sh/common.sh
 sudo  DEBIAN_FRONTEND=noninteractive  apt-get --yes  update
 sudo  DEBIAN_FRONTEND=noninteractive  apt-get --yes  dist-upgrade
 #sudo  DEBIAN_FRONTEND=noninteractive  apt-get  install  --yes  slim
-sudo  DEBIAN_FRONTEND=noninteractive  apt-get  install  --yes  ubuntu-gnome-desktop
+sudo  DEBIAN_FRONTEND=noninteractive  nala  install  --yes  ubuntu-gnome-desktop
 
 sudo  DEBIAN_FRONTEND=noninteractive  apt-get --yes  update
 sudo  DEBIAN_FRONTEND=noninteractive  apt-get --yes  dist-upgrade
