@@ -105,7 +105,7 @@ myfirstproject=$(gcloud projects list  --format='value(PROJECT_ID)' | head -1 )
 gcloud compute ssh "$USER"@instance-instalacion \
     --zone=us-west4-c \
     --project="$myfirstproject" \
-    -- bash -s < "ls" 
+    -- bash -s "ls" 
 
 gcloud compute ssh "$USER"@instance-instalacion \
     --zone=us-west4-c \
