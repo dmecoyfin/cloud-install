@@ -166,11 +166,11 @@ bitacora   "desktop creation"
 
 #------------------------------------------------------------------------------
 printf  '\n\n\n\n'
-printf  'Esperando a que termine la instalacino de paquetes lentos de R\n'
+printf  'Esperando a que termine la instalacion de paquetes lentos de R\n'
 /home/$USER/install/semaforo  wait  /sem_lentosR
 
 printf  '\n\n\n\n'
-read -r -p "Presione la tecla Enter para finalizar..." key
+read -r -p "La instalacion ha terminado. Presione la tecla Enter para finalizar..." key
 
 bitacora   "END  final.sh"
 
