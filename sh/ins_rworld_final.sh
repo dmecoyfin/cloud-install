@@ -15,7 +15,13 @@ logito="ins_rworld_final.txt"
 
 source  /home/$USER/cloud-install/sh/common.sh
 
-Rscript --verbose  /home/$USER/cloud-install/r/instalar_paquetes_lentos.r    &
+
+gcc /home/$USER/cloud-install/c/semaforo.c  -lpthread -o  /home/$USER/semaforo
+/home/$USER/semaforo open /sem_lentosR  3
+
+
+/home/$USER/cloud-install/sh/ins_lentosR.sh &
+
 
 # xgboost instalo la ultima version de desarrollo de XGBoost
 # Documentacion  https://xgboost.readthedocs.io/en/latest/build.html
