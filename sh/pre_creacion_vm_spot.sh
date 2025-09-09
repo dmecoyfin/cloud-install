@@ -24,7 +24,7 @@ rm -rf  /home/$USER/install
 mkdir  -p  /home/$USER/install
 mkdir  -p  /home/$USER/log
 
-sudo  apt-get --yes  install  git rsync
+sudo  apt-get --yes  install  git rsync  nala
 
 # clono el repo de instalacion
 rm -rf /home/$USER/cloud-install
@@ -64,7 +64,7 @@ myserviceaccount=$(gcloud iam service-accounts list --format='value(EMAIL)' | he
 gcloud compute instances create instance-instalacion \
     --project="$myfirstproject" \
     --zone=us-west4-c \
-    --machine-type=e2-standard-4 \
+    --machine-type=t2d-standard-8 \
     --network-interface=network-tier=PREMIUM,stack-type=IPV4_ONLY,subnet=default \
     --no-restart-on-failure \
     --maintenance-policy=TERMINATE \
