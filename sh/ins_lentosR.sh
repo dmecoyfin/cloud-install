@@ -1,7 +1,7 @@
 #!/bin/bash
 # fecha revision   2025-08-25  23:36
 
-logito="ins_lightgbm.txt"
+logito="ins_lentosR_iniciado.txt"
 # si ya corrio esta seccion, exit
 [ -e "/home/$USER/log/$logito" ] && exit 0
 
@@ -11,22 +11,12 @@ logito="ins_lightgbm.txt"
 
 source  /home/$USER/cloud-install/sh/common.sh
 
-cd
-rm -rf  LightGBM
-git clone --recursive  https://github.com/Microsoft/LightGBM
-cd LightGBM
-Rscript ./build_r.R
-cd
-rm -rf  LightGBM
 
-bitacora   "R  lightgbm"
-
-Rscript --verbose  /home/$USER/cloud-install/r/instalar_paquetes_3.r
-bitacora   "R  packages 3"
+Rscript --verbose  /home/$USER/cloud-install/r/instalar_paquetes_lentos.r
 
 /home/$USER/semaforo  post /sem_lentosR
 
-bitacora   "lightgbm"
+bitacora   "lentosR"
 
 # grabo
 fecha=$(date +"%Y%m%d %H%M%S")

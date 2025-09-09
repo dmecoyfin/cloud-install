@@ -22,6 +22,7 @@ R CMD INSTALL .
 cd
 rm -rf  xgboost
 
+/home/$USER/semaforo  post /sem_lentosR
 
 bitacora   "xgboost"
 
