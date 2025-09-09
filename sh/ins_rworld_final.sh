@@ -17,10 +17,9 @@ source  /home/$USER/cloud-install/sh/common.sh
 
 
 gcc /home/$USER/cloud-install/c/semaforo.c  -lpthread -o  /home/$USER/install/semaforo
-/home/$USER/install/semaforo open /sem_lentosR  3
 
 
-/home/$USER/cloud-install/sh/ins_lentosR.sh &
+/home/$USER/cloud-install/sh/ins_lentosR.sh  &
 
 
 # xgboost instalo la ultima version de desarrollo de XGBoost
