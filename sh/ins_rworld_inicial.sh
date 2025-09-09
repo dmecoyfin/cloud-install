@@ -60,6 +60,7 @@ rstudiopack="rstudio-server-2025.05.1-513-amd64.deb"
 wget  https://download2.rstudio.org/server/jammy/amd64/"$rstudiopack"
 
 
+sudo  DEBIAN_FRONTEND=noninteractive  apt-get install --yes gdebi
 sudo  DEBIAN_FRONTEND=noninteractive  gdebi -n $rstudiopack
 rm    $rstudiopack
 
