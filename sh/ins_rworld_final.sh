@@ -33,7 +33,7 @@ bitacora   "R  xgboost"
 
 # LightGBM instalo version de desarrollo
 # Documentacion  https://lightgbm.readthedocs.io/en/latest/Installation-Guide.html#linux
-/home/$USER/cloud-install/ins_lightgbm.sh  &
+/home/$USER/cloud-install/sh/ins_lightgbm.sh  &
 bitacora   "R  lightgbm"
 
 
