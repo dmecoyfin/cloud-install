@@ -16,19 +16,19 @@ source  /home/$USER/cloud-install/sh/common.sh
 sudo  DEBIAN_FRONTEND=noninteractive  apt-get --yes  update
 sudo  DEBIAN_FRONTEND=noninteractive  apt-get --yes  dist-upgrade
 #sudo  DEBIAN_FRONTEND=noninteractive  apt-get  install  --yes  slim
-sudo  DEBIAN_FRONTEND=noninteractive  nala  install  --yes  ubuntu-gnome-desktop
+sudo  DEBIAN_FRONTEND=noninteractive  nala  install  --assume-yes  ubuntu-gnome-desktop
 
 sudo  DEBIAN_FRONTEND=noninteractive  apt-get --yes  update
 sudo  DEBIAN_FRONTEND=noninteractive  apt-get --yes  dist-upgrade
 
 #sudo  DEBIAN_FRONTEND=noninteractive  apt-get  install  --yes  kde-plasma-desktop 
 
-sudo  DEBIAN_FRONTEND=noninteractive  apt-get  install --yes  gnome-tweaks
-sudo  DEBIAN_FRONTEND=noninteractive  apt-get  install --yes  language-pack-gnome-en
-sudo  DEBIAN_FRONTEND=noninteractive  apt-get  install --yes  language-pack-gnome-es
+sudo  DEBIAN_FRONTEND=noninteractive  nala  install  --assume-yes  gnome-tweaks
+sudo  DEBIAN_FRONTEND=noninteractive  nala  install  --assume-yes  language-pack-gnome-en
+sudo  DEBIAN_FRONTEND=noninteractive  nala  install  --assume-yes  language-pack-gnome-es
 
 # instalo xrdp para acceder desde Windows por Remote Desktop
-sudo  DEBIAN_FRONTEND=noninteractive  apt-get  install --yes  xrdp
+sudo  DEBIAN_FRONTEND=noninteractive  nala  install  --assume-yes  xrdp
 # abro en Google Cloud el puerto 3389
 gcloud compute firewall-rules create xrdp --allow tcp:3389  --source-tags=instance-instalacion --source-ranges=0.0.0.0/0 --description="xrdp"
 
