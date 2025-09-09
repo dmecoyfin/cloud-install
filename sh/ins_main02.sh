@@ -61,4 +61,5 @@ sudo  DEBIAN_FRONTEND=noninteractive   apt-get  --yes  dist-upgrade
 sudo  DEBIAN_FRONTEND=noninteractive   apt-get  --yes  autoremove
 
 
-echo "Ha finalizado la parte  desatendida  de la instalacion"
+printf "\n\n\n"
+printf "Ha finalizado la parte  desatendida  de la instalacion\n\n"
