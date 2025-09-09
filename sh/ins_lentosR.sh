@@ -22,6 +22,7 @@ source  /home/$USER/cloud-install/sh/common.sh
 Rscript --verbose  /home/$USER/cloud-install/r/instalar_paquetes_lentos.r
 
 /home/$USER/install/semaforo  post /sem_lentosR
+/home/$USER/install/semaforo  post /sem_lentosR
 
 bitacora   "lentosR"
 
