@@ -11,16 +11,18 @@ source  /home/$USER/cloud-install/sh/common.sh
 # Documentacion  https://cloud.google.com/sdk/docs/install#deb
 
 sudo  DEBIAN_FRONTEND=noninteractive  apt-get update
-sudo  DEBIAN_FRONTEND=noninteractive  apt-get --yes install apt-transport-https ca-certificates gnupg curl perl
+sudo  DEBIAN_FRONTEND=noninteractive apt-get install --yes nala
+
+sudo  DEBIAN_FRONTEND=noninteractive  nala install --assume-yes  apt-transport-https ca-certificates gnupg curl perl
+
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg
 echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-sudo DEBIAN_FRONTEND=noninteractive apt-get update && sudo DEBIAN_FRONTEND=noninteractive apt-get --yes install google-cloud-cli
+sudo DEBIAN_FRONTEND=noninteractive apt-get update && sudo  DEBIAN_FRONTEND=noninteractive  nala install --assume-yes  google-cloud-cli
 
 
 # arquitectura
 #sudo  DEBIAN_FRONTEND=noninteractive  apt-get update  && sudo dpkg --add-architecture  i386
-sudo  DEBIAN_FRONTEND=noninteractive  apt-get --yes install  software-properties-common
-sudo  DEBIAN_FRONTEND=noninteractive  apt-get --yes install  build-essential
+sudo  DEBIAN_FRONTEND=noninteractive  nala install --assume-yes  software-properties-common  build-essential
 
 
 bitacora   "architecture"
