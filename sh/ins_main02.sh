@@ -4,6 +4,9 @@
 # abort on any subprocess error
 set -eo pipefail
 
+# apagado por si se olvidaron
+echo "Apagado" && sleep 20000 &&  /home/$USER/cloud-install/direct/apagar_vm.sh  &
+
 # verifico el repo de la catedra
 /home/$USER/cloud-install/sh/ins_common.sh
 
