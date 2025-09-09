@@ -1,5 +1,5 @@
 options(repos = c("https://cloud.r-project.org/"))
-options(Ncpus = 4)
+options(Ncpus = 8)
 
 install.packages( "pak",  dependencies= TRUE, INSTALL_opts="--no-multiarch" )
 require("pak")
