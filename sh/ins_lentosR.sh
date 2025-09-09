@@ -1,12 +1,18 @@
 #!/bin/bash
 # fecha revision   2025-08-25  23:36
 
-logito="ins_lentosR_iniciado.txt"
+
+logito="ins_lentosR_finalizado.txt"
 # si ya corrio esta seccion, exit
 [ -e "/home/$USER/log/$logito" ] && exit 0
 
 # requiero que el system este instalado
 [ ! -e "/home/$USER/log/ins_rlang.txt" ] && exit 1
+
+
+# grabacion  inicial
+fecha=$(date +"%Y%m%d %H%M%S")
+echo $fecha > /home/$USER/log/ins_lentosR_iniciado.txt
 
 
 source  /home/$USER/cloud-install/sh/common.sh
