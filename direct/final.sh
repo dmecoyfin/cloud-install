@@ -9,6 +9,12 @@ MIZONA=$(gcloud compute instances list --filter=$MIHOST --format='value(ZONE)')
 printf "\n borrando imagen image-dm vieja en caso que hubiera quedado como resabio de intento de instalacion anterior\n\n"
 gcloud compute images delete image-dm  --quiet  --verbosity=none
 
+printf  '\n\n\n\n'
+printf  'Esperando a que termine la instalacion de paquetes lentos de R\n'
+/home/$USER/install/semaforo  wait  /sem_lentosR
+printf  '\nPaquetes lentos de R instalados\n'
+
+
 gcloud compute images create image-dm   \
        --source-disk=$MIHOST            \
        --source-disk-zone=$MIZONA       \
@@ -165,12 +171,9 @@ source  /home/$USER/install/common.sh
 bitacora   "desktop creation"
 
 #------------------------------------------------------------------------------
-printf  '\n\n\n\n'
-printf  'Esperando a que termine la instalacion de paquetes lentos de R\n'
-/home/$USER/install/semaforo  wait  /sem_lentosR
 
 printf  '\n\n\n\n'
-read -r -p "La instalacion ha terminado. Presione la tecla Enter para finalizar..." key
+read -r -p "TODA instalacion ha terminado. Presione la tecla Enter para finalizar..." key
 
 bitacora   "END  final.sh"
 
