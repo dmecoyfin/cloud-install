@@ -19,6 +19,8 @@ source  /home/$USER/cloud-install/sh/common.sh
 
 /home/$USER/install/semaforo open /sem_lentosR  0
 
+mkdir -p /home/$USER/.R
+echo "MAKEFLAGS = -j4"  >> /home/$USER/.R/Makevars
 Rscript --verbose  /home/$USER/cloud-install/r/instalar_paquetes_lentos.r
 
 /home/$USER/install/semaforo  post /sem_lentosR
