@@ -12,7 +12,7 @@ source /home/$USER/.venv/bin/activate
 R_LIBS_USER=/home/$USER/.local/lib/R/site-library
 export R_LIBS_USER
 
-Rscript --vanilla  /home/$USER/cloud-install/r/102_kaggle_prueba.r
+Rscript --vanilla  /home/$USER/cloud-install/r/102_kaggle_prueba.r  &
 
 fecha=$(date +"%Y%m%d %H%M%S")
 echo $fecha > /home/$USER/log/$logito
