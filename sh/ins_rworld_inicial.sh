@@ -33,7 +33,7 @@ sudo cp marutter_pubkey.asc /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
 echo "deb [arch=amd64] https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/" > /home/$USER/install/cran_r.list
 sudo cp /home/$USER/install/cran_r.list  /etc/apt/sources.list.d/cran_r.list
 sudo apt update -qq
-sudo DEBIAN_FRONTEND=noninteractive apt install --yes --no-install-recommends r-base-core  r-base-dev  r-cran-devtools
+sudo DEBIAN_FRONTEND=noninteractive nala install --yes --no-install-recommends r-base-core  r-base-dev  r-cran-devtools
 
 Rscript --verbose  /home/$USER/cloud-install/r/test_rlang.r  /home/$USER/log/ins_rlang.txt
 
