@@ -1,11 +1,11 @@
-options(repos = c("https://cloud.r-project.org/"))
+options(repos = c("https://duckdb.r-universe.dev/"))
 options(Ncpus = 4)
 
 require("bspm")
 bspm::disable()
 
 require("pak")
-pak::pkg_install( c("duckdb","duckplyr") )
+pak::pkg_install( c("duckdb","duckplyr"))
 
 
 quit( save="no" )
