@@ -102,15 +102,10 @@ sleep 30
 
 
 myfirstproject=$(gcloud projects list  --format='value(PROJECT_ID)' | head -1 )
-gcloud compute ssh "$USER"@instance-instalacion \
+gcloud --quiet compute ssh "$USER"@instance-instalacion \
     --zone=us-west4-c \
     --project="$myfirstproject" \
-    -- bash -s  "ls" 
+    --command="bash -s" < /home/$USER/cloud-install/sh/pre_main01.sh 
 
-gcloud compute ssh "$USER"@instance-instalacion \
-    --zone=us-west4-c \
-    --project="$myfirstproject" \
-    -- bash -s < /home/$USER/cloud-install/sh/pre_main01.sh 
-
-echo "Esperando 15 segundos"
-sleep 10
+echo "Esperando 5 segundos"
+sleep 5
