@@ -20,7 +20,7 @@ source  /home/$USER/cloud-install/sh/common.sh
 source  /home/$USER/.venv/bin/activate
 
 # instalo paquetes de Python
-/home/gustavo_denicolay/.local/bin/uv pip install  \
+/home/$USER/.local/bin/uv pip install  \
     Pandas  Scikit-learn  Statsmodels       \
     Numpy  Matplotlib  fastparquet          \
     pyarrow  tables  plotly  seaborn xlrd   \
@@ -28,39 +28,39 @@ source  /home/$USER/.venv/bin/activate
     Requests  Selenium  PyTest  Unit        \
     dask  numba  polars  Flask 
 
-/home/gustavo_denicolay/.local/bin/uv pip install  duckdb  jupysql  duckdb-engine
+/home/$USER/.local/bin/uv pip install  duckdb  jupysql  duckdb-engine
 
-/home/gustavo_denicolay/.local/bin/uv pip install  XGBoost  LightGBM  CatBoost HyperOpt  optuna
+/home/$USER/.local/bin/uv pip install  XGBoost  LightGBM  CatBoost HyperOpt  optuna
 
-/home/gustavo_denicolay/.local/bin/uv pip install  Boruta lime
+/home/$USER/.local/bin/uv pip install  Boruta lime
 
 # AutoML varios
-/home/gustavo_denicolay/.local/bin/uv pip install  h2o
-/home/gustavo_denicolay/.local/bin/uv pip install  flaml
-/home/gustavo_denicolay/.local/bin/uv pip install  tpot
+/home/$USER/.local/bin/uv pip install  h2o
+/home/$USER/.local/bin/uv pip install  flaml
+/home/$USER/.local/bin/uv pip install  tpot
 
-/home/gustavo_denicolay/.local/bin/uv pip install --no-deps  evalml
+/home/$USER/.local/bin/uv pip install --no-deps  evalml
 
 # Keras
-/home/gustavo_denicolay/.local/bin/uv pip install  Keras
+/home/$USER/.local/bin/uv pip install  Keras
 
 # librerias puntuales
-/home/gustavo_denicolay/.local/bin/uv pip install  kaggle  zulip  pika  gdown  mlflow
-/home/gustavo_denicolay/.local/bin/uv pip install  black[jupyter] category-encoders colorama featuretools holidays
+/home/$USER/.local/bin/uv pip install  kaggle  zulip  pika  gdown  mlflow
+/home/$USER/.local/bin/uv pip install  black[jupyter] category-encoders colorama featuretools holidays
 
-/home/gustavo_denicolay/.local/bin/uv pip install \
+/home/$USER/.local/bin/uv pip install \
    imbalanced-learn ipywidgets kaleido nlp-primitives pmdarima scikit-optimize --no-build-isolation --index-strategy unsafe-best-match
 
-/home/gustavo_denicolay/.local/bin/uv pip install  shap sktime texttable tomli woodwork[dask]
-/home/gustavo_denicolay/.local/bin/uv pip install  nbconvert[webpdf]
-/home/gustavo_denicolay/.local/bin/uv pip install  nb_pdf_template
+/home/$USER/.local/bin/uv pip install  shap sktime texttable tomli woodwork[dask]
+/home/$USER/.local/bin/uv pip install  nbconvert[webpdf]
+/home/$USER/.local/bin/uv pip install  nb_pdf_template
 
 
-/home/gustavo_denicolay/.local/bin/uv pip install  pydbus
+/home/$USER/.local/bin/uv pip install  pydbus
 
-/home/gustavo_denicolay/.local/bin/uv pip install  shap
-/home/gustavo_denicolay/.local/bin/uv pip install  dask-expr
-/home/gustavo_denicolay/.local/bin/uv pip install  umap umap-learn 
+/home/$USER/.local/bin/uv pip install  shap
+/home/$USER/.local/bin/uv pip install  dask-expr
+/home/$USER/.local/bin/uv pip install  umap umap-learn 
 
 
 
