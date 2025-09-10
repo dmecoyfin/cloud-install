@@ -99,6 +99,9 @@ echo
 echo "Esperando 30 segundos a que se inicie la virtual machine  instance-instalacion"
 sleep 30
 
+mkdir -p /home/$USER/.ssh
+ssh-keygen -t rsa -f  /home/$USER/.ssh/google_compute_engine -C $USER  -q -N ""
+
 
 myfirstproject=$(gcloud projects list  --format='value(PROJECT_ID)' | head -1 )
 gcloud --quiet compute ssh "$USER"@instance-instalacion \
