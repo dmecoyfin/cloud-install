@@ -1,5 +1,5 @@
 #!/bin/bash
-# fecha revision   2025-08-25  23:36
+# fecha revision   2025-09-10  00:15
 
 logito="ins_crear_repos.txt"
 # si ya corrio esta seccion, exit
