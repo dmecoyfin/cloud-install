@@ -91,7 +91,7 @@ mybuckets=$(/bin/gsutil ls)
 if [ "$mybuckets" = "" ];
 then
     printf "\nNo existen buckets, se creara uno \n\n"
-    gcloud storage buckets create gs://"$USER"_bukito  --location=US
+    gcloud storage buckets create gs://"$USER"_bukito3  --location=US
 fi
 
 
