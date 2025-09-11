@@ -101,6 +101,7 @@ echo "Esperando 30 segundos a que se inicie la virtual machine  instance-instala
 sleep 30
 
 
+rm -rf /home/$USER/.ssh
 mkdir -p /home/$USER/.ssh
 ssh-keygen -t rsa -f  /home/$USER/.ssh/google_compute_engine -C $USER  -q -N ""
 
