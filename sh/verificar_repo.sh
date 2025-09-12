@@ -14,13 +14,13 @@ if [ ! -d /home/$USER/$github_catedra_repo/src ]; then
 fi
 
 
-if [ ! -d /home/$USER/$github_catedra_repo/src/arboles ]; then
-    printf "\nError Fatal : No existe la carpeta  del repositorio  /home/$USER/$github_catedra_repo/src/arboles\n\n"
+if [ ! -d /home/$USER/$github_catedra_repo/$repo_check_directory ]; then
+    printf "\nError Fatal : No existe la carpeta  del repositorio  /home/$USER/$github_catedra_repo/$repo_check_directory\n\n"
     exit 1
 fi
 
-if [ ! -f /home/$USER/$github_catedra_repo/src/arboles/z0201_ComparandoModelos.ipynb ]; then
-    printf "\nError Fatal : No existe el archivo  /home/$USER/$github_catedra_repo/src/arboles/z0201_ComparandoModelos.ipynb\n\n"
+if [ ! -f /home/$USER/$github_catedra_repo/$repo_check_directory/$repo_check_file ]; then
+    printf "\nError Fatal : No existe el archivo  /home/$USER/$github_catedra_repo/$repo_check_directory/$repo_check_file\n\n"
     exit 1
 fi
 
@@ -98,7 +98,7 @@ if [ ! -f /home/$USER/cloud-install/r/"$kaggleprueba" ]; then
     exit 1
 fi
 
-cp /home/$USER/cloud-install/r/"$kaggleprueba"  /home/$USER/$github_catedra_repo/src/arboles
+cp /home/$USER/cloud-install/r/"$kaggleprueba"  /home/$USER/$github_catedra_repo/$repo_check_directory/$repo_check_file
 if [ ! $? -eq 0 ]; then 
   printf "\nError : No se pudo copiar /home/$USER/install/$kaggleprueba\n\n"
   exit 1
@@ -220,13 +220,13 @@ fi
 
 # cargo lo nuevo
 git checkout $MIHOST
-git add /home/$USER/$github_catedra_repo/src/arboles/"$kaggleprueba"
+git add /home/$USER/$github_catedra_repo/$repo_check_directory/"$kaggleprueba"
 if [ ! $? -eq 0 ]; then 
-  printf "\nFatal Error : git add /home/$USER/$github_catedra_repo/src/arboles/$kaggleprueba  \n\n"
+  printf "\nFatal Error : git add /home/$USER/$github_catedra_repo/$repo_check_directory/$kaggleprueba  \n\n"
   exit 1
 fi
 
-git commit -m "arboles/$kaggleprueba"
+git commit -m "$repo_check_directory/$kaggleprueba"
 
 
 git push   origin  $MIHOST
