@@ -4,10 +4,6 @@
 webfiles="https://storage.googleapis.com/open-courses/dmeyf2025-e4a2"
 
 
-script_instalar2="instalar-ba02.sh"
-script_final="final-ba.sh"
-script_finalzzzz="final-zzzz-ba.sh"
-
 dataset1="competencia_01_crudo.csv"
 dataset2="competencia_02_crudo.csv.gz"
 dataset3="competencia_03_crudo.csv.gz"
@@ -30,7 +26,8 @@ export github_install_repo="cloud-install"
 export mlflow_usuario="dmeyf2025"
 export mlflow_clave="constructivism"
 
-
+repo_check_directory="src/arboles"
+repo_check_file="z0201_ComparandoModelos.ipynb"
 
 tabulador="	"
 logfile="/home/$USER/install/log_install.txt"
