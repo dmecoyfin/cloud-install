@@ -107,7 +107,7 @@ ssh-keygen -t rsa -f  /home/$USER/.ssh/google_compute_engine -C $USER  -q -N ""
 
 myfirstproject=$(gcloud projects list  --format='value(PROJECT_ID)' | head -1 )
 gcloud --quiet compute ssh "$USER"@instance-instalacion \
-    --zone=us-west4-c \
+    --zone=us-west4-b \
     --project="$myfirstproject" \
     --command="bash -s" < /home/$USER/cloud-install/sh/pre_main01.sh 
 
