@@ -56,6 +56,8 @@ echo "Apagado" && sleep 10800 &&  /home/$USER/cloud-install/direct/apagar_vm.sh 
 /home/$USER/cloud-install/sh/ins_gnome_apps.sh
 /home/$USER/cloud-install/sh/ins_gnome_menus.sh
 
+/home/$USER/cloud-install/sh/ins_code_server.sh
+
 
 sudo adduser $USER sudo
 
