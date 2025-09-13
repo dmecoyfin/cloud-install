@@ -65,7 +65,7 @@ myserviceaccount=$(gcloud iam service-accounts list --format='value(EMAIL)' | he
 gcloud compute instances create instance-instalacion \
     --project="$myfirstproject" \
     --zone=us-west4-c \
-    --machine-type=t2d-standard-8 \
+    --machine-type=c4-standard-4 \
     --network-interface=network-tier=PREMIUM,stack-type=IPV4_ONLY,subnet=default \
     --no-restart-on-failure \
     --maintenance-policy=TERMINATE \

@@ -43,7 +43,7 @@ sudo  DEBIAN_FRONTEND=noninteractive  nala install --assume-yes \
       libhiredis-dev  gdal-bin             \
       libglu1-mesa-dev  libgmp3-dev        \
       libgsl0-dev  jags  libmpfr-dev       \
-      libopenmpi-dev
+      libopenmpi-dev  openssh-server sshfs 
 
 bitacora   "system packages"
 
