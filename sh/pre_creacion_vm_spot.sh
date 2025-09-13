@@ -66,22 +66,23 @@ gcloud compute instances create instance-instalacion \
     --project="$myfirstproject" \
     --zone=us-west4-b \
     --machine-type=c4-standard-4 \
-    --network-interface=network-tier=PREMIUM,stack-type=IPV4_ONLY,subnet=default \
+    --network-interface=network-tier=PREMIUM,nic-type=GVNIC,stack-type=IPV4_ONLY,subnet=default \
     --no-restart-on-failure \
     --maintenance-policy=TERMINATE \
     --provisioning-model=SPOT \
     --instance-termination-action=STOP \
     --service-account="$myserviceaccount" \
     --scopes=https://www.googleapis.com/auth/cloud-platform \
-    --tags=https-server,http-server \
-    --create-disk=auto-delete=yes,boot=yes,device-name=instance-20250709-123914,image=projects/ubuntu-os-cloud/global/images/ubuntu-minimal-2404-noble-amd64-v20250828,mode=rw,size=64,type=pd-standard \
+    --tags=http-server,https-server \
+    --create-disk=auto-delete=yes,boot=yes,device-name=instance-20250913-100149,image=projects/ubuntu-os-cloud/global/images/ubuntu-minimal-2404-noble-amd64-v20250828,mode=rw,provisioned-iops=3300,provisioned-throughput=215,size=50,type=hyperdisk-balanced \
     --no-shielded-secure-boot \
     --shielded-vtpm \
     --shielded-integrity-monitoring \
     --labels=goog-ec-src=vm_add-gcloud \
     --reservation-affinity=none
-
-
+    
+    
+    
 # verifico que existan buckets, sino creo el primero
 
 myfirstproject=$(gcloud projects list  --format='value(PROJECT_ID)' | head -1 )
