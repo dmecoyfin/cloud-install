@@ -221,6 +221,13 @@ fi
 
 # cargo lo nuevo
 git checkout $MIHOST
+
+cp /home/$USER/cloud-install/r/"$kaggleprueba"  /home/$USER/$github_catedra_repo/$repo_check_directory/$repo_check_file
+if [ ! $? -eq 0 ]; then 
+  printf "\nError : No se pudo copiar /home/$USER/install/$kaggleprueba\n\n"
+  exit 1
+fi
+
 git add /home/$USER/$github_catedra_repo/$repo_check_directory/"$kaggleprueba"
 if [ ! $? -eq 0 ]; then 
   printf "\nFatal Error : git add /home/$USER/$github_catedra_repo/$repo_check_directory/$kaggleprueba  \n\n"
