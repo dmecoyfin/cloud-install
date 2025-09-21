@@ -47,6 +47,7 @@ SEAC=$(gcloud iam service-accounts list --filter=Compute --format='value(EMAIL)'
 echo $SEAC
 
 
+
 # 8vcpu  32 GB RAM
 gcloud beta compute instance-templates delete temp-08vcpu-032ram  --region=northamerica-northeast2 --quiet  --verbosity=none  --project=$MY_PROJECT_ID
 
@@ -62,7 +63,7 @@ gcloud beta compute instance-templates create temp-08vcpu-032ram    \
        --tags=http-server,https-server                              \
        --instance-template-region=northamerica-northeast2           \
        --create-disk=auto-delete=yes,boot=yes,device-name=temp-08vcpu-032ram,image=image-dm,mode=rw,size=256,type=pd-standard \
-       --no-shielded-secure-boot --shielded-vtpm                    \
+       --shielded-secure-boot  \
        --shielded-integrity-monitoring --reservation-affinity=any   \
        --metadata-from-file shutdown-script=/home/$USER/cloud-install/direct/shutdown-script.sh
 
@@ -82,7 +83,7 @@ gcloud compute instance-templates create temp-08vcpu-064ram         \
        --tags=http-server,https-server                              \
        --instance-template-region=northamerica-northeast2           \
        --create-disk=auto-delete=yes,boot=yes,device-name=temp-08vcpu-064ram,image=image-dm,mode=rw,size=256,type=pd-standard \
-       --no-shielded-secure-boot --shielded-vtpm                    \
+       --shielded-secure-boot                                       \
        --shielded-integrity-monitoring --reservation-affinity=any   \
        --metadata-from-file shutdown-script=/home/$USER/cloud-install/direct/shutdown-script.sh
 
@@ -102,7 +103,7 @@ gcloud compute instance-templates create temp-08vcpu-128ram         \
        --tags=http-server,https-server                              \
        --instance-template-region=northamerica-northeast2           \
        --create-disk=auto-delete=yes,boot=yes,device-name=temp-08vcpu-128ram,image=image-dm,mode=rw,size=256,type=pd-standard \
-       --no-shielded-secure-boot --shielded-vtpm                    \
+       --shielded-secure-boot                                       \
        --shielded-integrity-monitoring --reservation-affinity=any   \
        --metadata-from-file shutdown-script=/home/$USER/cloud-install/direct/shutdown-script.sh
 
@@ -123,7 +124,7 @@ gcloud compute instance-templates create temp-08vcpu-256ram         \
        --tags=http-server,https-server                              \
        --instance-template-region=northamerica-northeast2           \
        --create-disk=auto-delete=yes,boot=yes,device-name=temp-08vcpu-256ram,image=image-dm,mode=rw,size=256,type=pd-standard \
-       --no-shielded-secure-boot --shielded-vtpm                    \
+       --shielded-secure-boot                                       \
        --shielded-integrity-monitoring --reservation-affinity=any   \
        --metadata-from-file shutdown-script=/home/$USER/cloud-install/direct/shutdown-script.sh
 
@@ -143,7 +144,7 @@ gcloud compute instance-templates create temp-08vcpu-512ram         \
        --tags=http-server,https-server                              \
        --instance-template-region=northamerica-northeast2           \
        --create-disk=auto-delete=yes,boot=yes,device-name=temp-08vcpu-512ram,image=image-dm,mode=rw,size=256,type=pd-standard \
-       --no-shielded-secure-boot --shielded-vtpm                    \
+       --shielded-secure-boot                                       \
        --shielded-integrity-monitoring --reservation-affinity=any   \
        --metadata-from-file shutdown-script=/home/$USER/cloud-install/direct/shutdown-script.sh
 
