@@ -53,7 +53,7 @@ echo "Pin-Priority: 700" |  sudo tee -a /etc/apt/preferences.d/99cranapt
 sudo apt update -qq
 
 #------------------------------------------------------------------------------
-# Instalo RStudio Server    Version: 2025.09.0+387 | Released: 2025-09-12 ----
+# Instalo RStudio Server    Version: 2025.09.2+418 | Released: 2025-10-29 ----
 # Doc  https://rstudio.com/products/rstudio/download-server/debian-ubuntu/
 
 [ ! -e "/home/$USER/log/ins_rlang.txt" ] && exit 1
